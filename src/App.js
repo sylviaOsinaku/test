@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import Home from "./Pages/Home";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Routes, Route } from "react-router-dom";
+// import Stateful from "./Components/Stateful";
+import About from "./Components/About";
+import MainNavigation from "./Components/MainLayout";
+import MainDashBoard from "./AssignmentCompo/MainDashBoard";
+import Shop from "./Pages/Shop";
+import Products from "./Pages/Product";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="" element={<MainNavigation />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="shop" element={<Shop />}></Route>
+        <Route path="shop/:product" element={<Products />}></Route>
+      </Route>
+      {/* <Route path="" element={<MainDashBoard />}></Route> */}
+    </Routes>
   );
-}
-
+};
 export default App;

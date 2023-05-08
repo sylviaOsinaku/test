@@ -1,0 +1,10 @@
+.hero {
+  background-color: blueviolet;
+  padding: 10px;
+  height: 600px;
+}
+
+.check-inheritance {
+  background-color: blueviolet;
+  height: 400px;
+}
