@@ -7,6 +7,7 @@ function Products() {
     <div>
       Show individual
       <h1> {params.product}</h1>
+      <p>Yay ! Good product here to checkout git add and git push </p>
     </div>
   );
 }
